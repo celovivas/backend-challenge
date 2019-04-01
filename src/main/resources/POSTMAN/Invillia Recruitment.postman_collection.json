@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "064ca273-c8b0-42d8-af95-27edd46a33ac",
+		"name": "Invillia Recruitment",
+		"description": "Invillia Recruitment Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "findAll Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 88f27e97-376a-4a47-9be1-5d053ac23a0c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						},
+						"description": "http://localhost:8080/stores"
+					},
+					"response": []
+				},
+				{
+					"name": "find Orders by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/orders/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"2"
+							]
+						},
+						"description": "http://localhost:8080/stores"
+					},
+					"response": []
+				},
+				{
+					"name": "Save Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer 88f27e97-376a-4a47-9be1-5d053ac23a0c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"address\": \"Rua da Mata, Centro, Salvador, Bahia\",\n\t\"confirmationDate\": \"2019-11-11\",\n\t\"orderPaymentItens\": [\n\t\t\t{\"description\": \"Sofá\", \"unitPrice\": 1200, \"quantity\": 1},\n\t\t\t{\"description\": \"Cortina Blackout\", \"unitPrice\": 64.90, \"quantity\": 5}\n\t\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/orders/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"3"
+							]
+						},
+						"description": "http://localhost:8080/stores"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "findAll Stores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 924ac111-1dcd-4550-86d7-3fa45c910bc8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stores"
+							]
+						},
+						"description": "http://localhost:8080/stores"
+					},
+					"response": []
+				},
+				{
+					"name": "find Stores by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/stores/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stores",
+								"2"
+							]
+						},
+						"description": "http://localhost:8080/stores"
+					},
+					"response": []
+				},
+				{
+					"name": "Save Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer 924ac111-1dcd-4550-86d7-3fa45c910bc8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Supermercado São Paulo\",\n\t\"address\": \"Rua Euclides da Cunha, 34\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stores"
+							]
+						},
+						"description": "http://localhost:8080/stores"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Store",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer 924ac111-1dcd-4550-86d7-3fa45c910bc8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Mapron Materiais de Construção e Decorações\",\n\t\"address\": \"Rua Euclides da Cunha, 34, Bairro Inocoop, Bahia\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/stores/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stores",
+								"4"
+							]
+						},
+						"description": "http://localhost:8080/stores"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Store",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer 88f27e97-376a-4a47-9be1-5d053ac23a0c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Mapron Materiais de Construção\",\n\t\"address\": \"Rua Euclides da Cunha, 34, Bairro Inocoop\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/stores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stores",
+								"1"
+							]
+						},
+						"description": "http://localhost:8080/stores"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Refund Payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 88f27e97-376a-4a47-9be1-5d053ac23a0c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/payments/refunds/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"payments",
+								"refunds",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer 88f27e97-376a-4a47-9be1-5d053ac23a0c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"creditCard\": \"234-2232-44444\",\n\t\"paymentDate\": \"2019-03-30\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/payments/order/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"payments",
+								"order",
+								"2"
+							]
+						},
+						"description": "http://localhost:8080/stores"
+					},
+					"response": []
+				},
+				{
+					"name": "Find payment By Order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "18cb1a84-888f-48cf-9941-7f99be828214",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/payments/order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"payments",
+								"order",
+								"1"
+							]
+						},
+						"description": "http://localhost:8080/stores"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Config Token Authentication",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "invilliaRecruitment",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "invillia",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
