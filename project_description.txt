@@ -1,0 +1,77 @@
+Configuração para execução da API
+
+
+
+Ferramentas/frameworks utilizados na api:
+
+
+
+- SpringToolsSuit4
+
+- Database 
+
+- Docker (MySql)
+
+- Flyway
+
+- Lombok
+
+- SpringSecurity
+
+- SpringData
+
+- Clean code
+
+
+
+Observações:
+
+
+
+1- Criar o banco de dados:
+
+- Abrir o terminal do docker;
+
+- Acessar a pasta backend-challenge/src/main/resources/docker/
+
+- executar o arquivo docker-compose.yml
+
+	- Comando: docker-compose up
+
+	OBS.: Caso seja necessário recriar a imagem no docker, utilizar o seguinte comando para apagar a imagem atual antes de criá-la novamente:
+
+		- Comando: docker-compose down -v
+
+- As informações para acesso ao banco estão no arquivo:
+
+	- application.properties
+
+	
+
+2- Todas as URIs utilizadas foram criadas e utilizadas na ferramenta Postman.
+
+- Todas as uris utilizadas foram exportadas pelo Postman e estão disponibilizadas no arquivo abaixo:
+
+	backend-challenge/src/main/resources/POSTMAN/Invillia Recruitment.postman_collection.json
+
+- Está disponível também a uri para a geração do Token, da segurança:
+
+	- Nome: "Config Token Authentication"
+
+	- URI: http://localhost:8080/oauth/token
+
+
+
+3- Utilizei o springSecurity mas não integrei com usuários na base de dados.
+
+	- Criei um usuário fixo que está no arquivo abaixo:
+
+	backend-challenge/src/main/java/com/invillia/acme/config/SecurityConfig.java
+
+	- Usuário: invillia
+
+	- Senha: 123
+
+	- As credenciais de segurança da aplicação estão disponibilizadas no arquivo:
+
+		- application.properties.
