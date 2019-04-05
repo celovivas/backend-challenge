@@ -28,10 +28,13 @@ import com.invillia.acme.model.OrderPayment;
 import com.invillia.acme.model.Payment;
 import com.invillia.acme.service.PaymentService;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 /**
  * @author Marcelo
  *
  */
+@EnableSwagger2
 @RestController
 @RequestMapping("payments")
 public class PaymentController extends BaseControllerAb{

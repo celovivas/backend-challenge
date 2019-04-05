@@ -24,10 +24,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.invillia.acme.model.Store;
 import com.invillia.acme.service.StoreService;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 /**
  * @author Marcelo
  *
  */
+@EnableSwagger2
 @RestController
 @RequestMapping("stores")
 public class StoreController extends BaseControllerAb{
